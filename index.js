@@ -1,8 +1,11 @@
-// index.js — astig-gateway v0
+// index.js -> astig-gateway v0
+
+const express = require("express");
+const cors = require("cors");
 
 // ESM-compatible node-fetch wrapper for CommonJS
 const fetch = (...args) =>
-  import('node-fetch').then(({ default: fetch }) => fetch(...args));
+  import("node-fetch").then(({ default: fetch }) => fetch(...args));
 
 const app = express();
 
